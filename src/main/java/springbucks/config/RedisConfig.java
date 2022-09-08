@@ -7,12 +7,17 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 
+
 @Configuration
 public class RedisConfig {
 
     @Autowired
     private RedisConnectionFactory redisConnectionFactory;
 
+    /**
+     * 题目1 实现Bean装配
+     * @return
+     */
     @Bean
     public RedisMessageListenerContainer redisMessageListenerContainer() {
         RedisMessageListenerContainer rls = new RedisMessageListenerContainer();

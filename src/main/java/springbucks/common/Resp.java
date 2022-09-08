@@ -37,6 +37,10 @@ public class Resp<T> {
         return true;
     }
 
+    public static <F> Resp<F> Fail(F data) {
+        return new Resp(FAIL,"fail",data);
+    }
+
     public static Resp Fail(int errcode, String errmsg) {
         return new Resp(errcode,errmsg);
     }

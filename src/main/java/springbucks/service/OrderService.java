@@ -5,5 +5,10 @@ import springbucks.data.Order;
 
 public interface OrderService {
 
-    Order createOrder(Order order);
+    /**
+     * 创建订单
+     * @param order
+     * @return
+     */
+    Resp createOrder(Order order);
 }

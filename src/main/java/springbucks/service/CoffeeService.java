@@ -12,5 +12,34 @@ public interface CoffeeService {
      * @param coffee
      * @return
      */
-    Coffee createCoffee(Coffee coffee);
+    Resp createCoffee(Coffee coffee);
+
+    /**
+     * 获取咖啡
+     * @param id
+     * @return
+     */
+    Resp getCoffee(String id);
+
+    /**
+     * 更新咖啡信息
+     * @param id
+     * @param coffee
+     * @return
+     */
+    Resp updateCoffee(Long id,Coffee coffee);
+
+    /**
+     * 设置咖啡名称
+     * @param name
+     * @return
+     */
+    Resp setCoffeeName(Long id,String name);
+
+    /**
+     * 删除咖啡
+     * @param id
+     * @return
+     */
+    Resp deleteCoffee(Long id);
 }
